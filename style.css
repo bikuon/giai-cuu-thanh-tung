@@ -15,7 +15,9 @@ body{
 html, body {
   touch-action: manipulation;
 }
-
+.center-text {
+  text-align: center;
+}
 /* Or apply only to specific interactive components */
 button, .clickable-element {
   touch-action: manipulation;
