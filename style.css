@@ -9,6 +9,7 @@ body{
     flex-direction:column;
 
     align-items:center;
+    padding : 10px;
 
 }
 /* Apply globally to the entire page */
@@ -57,7 +58,7 @@ body::after{
 .title{
 
     margin-top:25px;
-
+padding : 20px
     font-size:42px;
 
 }
@@ -87,6 +88,9 @@ body::after{
     background:white;
 
 
+}
+p{
+    margin-bottom: 5px;
 }
 
 #canvas img{
