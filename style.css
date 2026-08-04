@@ -11,7 +11,15 @@ body{
     align-items:center;
 
 }
+/* Apply globally to the entire page */
+html, body {
+  touch-action: manipulation;
+}
 
+/* Or apply only to specific interactive components */
+button, .clickable-element {
+  touch-action: manipulation;
+}
 body::after{
 
     content:"";
