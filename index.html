@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
 <body>
 
@@ -33,14 +34,22 @@
     <button id="help">HELP</button>
     <button id="helpPro">HELP PROMAX</button>
 </div>
-<h1 class="title" class="center-text">
-    GIẢI CỨU THANH TÙ<span id="ng">NG</span>
+<h1 class="title" >
+    GIẢI CỨU <br>
+    THANH TÙ<span id="ng">NG</span>
 </h1>
-<p>Thanh Tùng đang bị tạm giam vì xuất toán sai</p>
-    <p>HÃY GIẢI CỨU THANH TÙNGGGGG!!!</p>
+<p id="introText" style="margin-top: 50px">
+    Tùng bị giam vì bị hãm hại<br>
+    HÃY GIẢI CỨU THANH TÙNGGGGG!!!
+</p>
+
+<p id="successText" style="margin-top: 50px; display: none;">
+    Cảm ơn đã cứu Thanh Tùng ❤️
+</p>
+
 <div id="popup" class="hidden">
     <div class="popup-content">
-        <h2>TIỀN CHUỘC 30 TRỊU!!!</h2>
+        <h2>TIỀN CHUỘC 30 TRỊU</h2>
 <h1>( •̀ ω •́ )✧</h1>
         <button id="close">ĐÓNG</button>
     </div>

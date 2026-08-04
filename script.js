@@ -9,6 +9,8 @@ const gif = document.getElementById("gif");
 const person = document.getElementById("person");
 
 const ng = document.getElementById("ng");
+const introText = document.getElementById("introText");
+const successText = document.getElementById("successText");
 
 let progress = 0;
 
@@ -75,11 +77,47 @@ function decayLoop() {
         gif.style.display = "none";
         person.style.display = "block";
         ng.style.opacity = 1;
+        finished = true;
 
+        gif.style.display = "none";
+        person.style.display = "block";
+        ng.style.opacity = 1;
+
+        introText.style.display = "none";
+        successText.style.display = "block";
+        celebrate();
+        document.querySelector(".title").textContent = "🎉CỨU ĐƯỢC RÒI🎉";
     }
 
 }
 
+
+function celebrate() {
+
+    // Big burst
+    confetti({
+        particleCount: 180,
+        spread: 120,
+        origin: { y: 0.6 }
+    });
+
+    // Left cannon
+    confetti({
+        particleCount: 80,
+        angle: 60,
+        spread: 70,
+        origin: { x: 0 }
+    });
+
+    // Right cannon
+    confetti({
+        particleCount: 80,
+        angle: 120,
+        spread: 70,
+        origin: { x: 1 }
+    });
+
+}
 
 decay = setInterval(decayLoop, 10);   // was 30ms
 const popup=document.getElementById("popup");
