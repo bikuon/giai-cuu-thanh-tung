@@ -8,10 +8,8 @@ const gif = document.getElementById("gif");
 
 const person = document.getElementById("person");
 
-const ng = document.getElementById("ng");
-
+let ng = document.getElementById("ng");
 const introText = document.getElementById("introText");
-
 const successText = document.getElementById("successText");
 
 let progress = 0;
@@ -19,6 +17,8 @@ let progress = 0;
 let finished = false;
 
 let decay;
+
+const ctaButton = document.getElementById("ctaButton");
 
 function update() {
 
@@ -73,20 +73,67 @@ function decayLoop() {
     }
 
     if (progress >= 240) {   // was 240
+
         finished = true;
+
         gif.style.display = "none";
         person.style.display = "block";
         ng.style.opacity = 1;
         finished = true;
+
         gif.style.display = "none";
         person.style.display = "block";
         ng.style.opacity = 1;
+
         introText.style.display = "none";
         successText.style.display = "block";
         celebrate();
         document.querySelector(".title").textContent = "CỨU ĐC RÒI🎉";
+        document.getElementById("ctaButton").style.display = "inline-block";
+        document.getElementById("helpButtons").style.display = "none";
+      
+        
     }
+
 }
+
+ctaButton.addEventListener("click", () => {
+
+    // Hide CTA immediately
+    ctaButton.style.display = "none";
+
+    // Shake the screen
+    document.body.classList.add("bigShake");
+
+    // Instantly drop the cage
+    progress = 0;
+    update();
+
+    // Show prison again
+    person.style.display = "none";
+    gif.style.display = "block";
+
+    // Reset title
+    ng.style.opacity = 0.5;
+
+    // Restore text
+    successText.style.display = "none";
+    introText.style.display = "block";
+
+    // Show HELP buttons again
+    document.getElementById("helpButtons").style.display = "flex";
+
+    // Allow playing again
+    finished = false;
+
+    setTimeout(() => {
+        document.body.classList.remove("bigShake");
+    }, 700);
+
+    document.querySelector(".title").textContent = "CỨU TÙNGGG 😭";
+
+});
+
 function celebrate() {
 
     // Big burst
