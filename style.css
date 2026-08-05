@@ -42,6 +42,82 @@ body::after{
     mix-blend-mode:overlay;
 }
 
+#ctaButton{
+    display:none;
+    font-size:14px;
+    line-height:1.6;
+    padding:18px 24px;
+    background:#e9e9e9;
+    color:black;
+    border:4px solid #000;
+    box-shadow:
+        6px 6px 0 #000,
+        6px 6px 0 #000;
+
+    cursor:pointer;
+
+
+    transform-origin:center;
+
+    animation:
+        popIn .35s ease,
+        ctaPop 1.2s ease-in-out infinite .35s;
+}
+
+#ctaButton:hover{
+    transform:translateY(-2px);
+}
+
+#ctaButton:active{
+    transform:translateY(6px);
+
+    box-shadow:none;
+}
+
+@keyframes bigShake {
+
+    0% { transform: translate(0,0) rotate(0deg); }
+    10% { transform: translate(-10px,4px) rotate(-2deg); }
+    20% { transform: translate(10px,-4px) rotate(2deg); }
+    30% { transform: translate(-8px,6px) rotate(-2deg); }
+    40% { transform: translate(8px,-6px) rotate(2deg); }
+    50% { transform: translate(-6px,4px) rotate(-1deg); }
+    60% { transform: translate(6px,-4px) rotate(1deg); }
+    70% { transform: translate(-4px,3px); }
+    80% { transform: translate(4px,-3px); }
+    90% { transform: translate(-2px,1px); }
+    100% { transform: translate(0,0); }
+
+}
+
+.bigShake{
+    animation:bigShake .7s;
+}
+
+@keyframes ctaPop {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1.08);
+    }
+
+    20% {
+        transform: scale(0.97);
+    }
+
+    30% {
+        transform: scale(1.05);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+}
+
 .shake{
     animation:shake .12s;
 }
