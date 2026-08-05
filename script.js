@@ -86,7 +86,7 @@ function decayLoop() {
         introText.style.display = "none";
         successText.style.display = "block";
         celebrate();
-        document.querySelector(".title").textContent = "🎉CỨU ĐƯỢC RÒI🎉";
+        document.querySelector(".title").textContent = "CỨU ĐƯỢC RÒI\n🎉🎉🎉";
     }
 
 }
